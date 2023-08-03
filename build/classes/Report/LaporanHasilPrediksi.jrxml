@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LaporanHasilKeputusan" language="" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c0577e58-7a10-4c55-a6f7-20a69f14af75">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="karnisa"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="nilaiKoefisien1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="hasil" class="java.lang.String"/>
+	<parameter name="tanggalAwal" class="java.lang.String"/>
+	<parameter name="tanggalAkhir" class="java.lang.String"/>
+	<parameter name="nilaiKoefisien0" class="java.lang.String"/>
+	<parameter name="bahan" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT *FROM penjualan]]>
+	</queryString>
+	<field name="Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="penjualan"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bahan" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="bahan"/>
+		<property name="com.jaspersoft.studio.field.label" value="bahan"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="penjualan"/>
+	</field>
+	<field name="jumlah" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="jumlah"/>
+		<property name="com.jaspersoft.studio.field.label" value="jumlah"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="penjualan"/>
+	</field>
+	<field name="tanggal" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="tanggal"/>
+		<property name="com.jaspersoft.studio.field.label" value="tanggal"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="penjualan"/>
+	</field>
+	<field name="bulan" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="bulan"/>
+		<property name="com.jaspersoft.studio.field.label" value="bulan"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="penjualan"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tahun" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tahun"/>
+		<property name="com.jaspersoft.studio.field.label" value="tahun"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="penjualan"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="70" uuid="f3c3fd85-5288-4a7d-b4c3-f7b965472c45"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="11" y="11" width="529" height="22" uuid="b512d8b2-7b35-4c3e-96fb-ffe94280af3e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOKO BANGUNAN CAHAYA INDAH ABADI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="33" width="529" height="26" uuid="060e0613-e8cd-445c-8390-ac8cac649fbd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HASIL PREDIKSI PEMBELIAN BARANG]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="230" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="230" uuid="3e4cfc58-e934-4ef1-ace0-2a5bf88baf14"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="40" width="165" height="20" uuid="3dd9f5f4-478c-45c3-92aa-461e34e060ef"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA BAHAN BANGUNAN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="178" y="170" width="360" height="20" uuid="18bc2375-cb37-40ff-a632-6cca8075199c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{hasil}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="120" width="165" height="20" uuid="bd9d8f87-cbc9-4c36-9da5-47676d367a9e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NILAI KOEFISIEN 1]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="178" y="40" width="360" height="20" uuid="1ffbbe24-e56b-4fef-bba9-099c0c2e2961"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{bahan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="60" width="167" height="20" uuid="76e06d94-1140-445a-a384-aa6d8d2b573d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TANGGAL AWAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="80" width="167" height="20" uuid="5f4733fc-3359-4f18-b61f-2ecf9896ea74"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TANGGAL AKHIR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="100" width="165" height="20" uuid="f85b756b-c906-4f70-b325-6605e95b003f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NILAI KOEFISIEN 0]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="178" y="60" width="360" height="20" uuid="442e06e8-9145-438b-a028-955792b2ba11"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{tanggalAwal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="178" y="80" width="360" height="20" uuid="64df8ebf-e4cc-45ee-9694-4e241106909f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{tanggalAkhir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="178" y="100" width="360" height="20" uuid="457bd77f-6103-41df-a9fe-3fc752576a4b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nilaiKoefisien0}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="170" width="165" height="20" uuid="490f6514-c5eb-4bfb-bb66-8dcccfe95e9b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HASIL PREDIKSI]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="178" y="120" width="360" height="20" uuid="7b0bfe82-5286-4ce7-b181-449995fde7b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nilaiKoefisien1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="15" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="11" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="10" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="15" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="240" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="240" uuid="80b733d3-1515-4315-9110-294cc6558003"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="433" y="50" width="107" height="20" uuid="9caa047a-b1bf-40c6-a13d-8d48d1507de1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MENGETAHUI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="187" width="107" height="20" uuid="19516211-72bf-439e-bae2-f1841a0200d6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PEMILIK]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
